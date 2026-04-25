@@ -8,7 +8,9 @@
   
   **Package:** com.chessbysid
   
-  **Developer:** Sid ("Designed by Sid")
+  **Developer:** Sudhir 
+  
+  Designed by Sid
 
   ## Overview
 
