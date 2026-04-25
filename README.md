@@ -1,9 +1,13 @@
  # Privacy Policy for ChessBySid
 
   **Effective date:** 25 April 2026
+  
   **App:** ChessBySid
+  
   **Version:** 1.0.0
+  
   **Package:** com.chessbysid
+  
   **Developer:** Sid ("Designed by Sid")
 
   ## Overview
