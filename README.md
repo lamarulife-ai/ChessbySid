@@ -1,7 +1,8 @@
-  # Privacy Policy for ChessBySid
+ # Privacy Policy for ChessBySid
 
-  **Effective date:** 24 April 2026
+  **Effective date:** 25 April 2026
   **App:** ChessBySid
+  **Version:** 1.0.0
   **Package:** com.chessbysid
   **Developer:** Sid ("Designed by Sid")
 
@@ -29,28 +30,42 @@
 
   ## Data stored locally on your device
 
-  ChessBySid stores a small amount of data locally on your device so the app
-  remembers your preferences between sessions. This data **never leaves
-  your device** and is not accessible to us.
+  ChessBySid stores a small amount of data locally so the app remembers your
+  preferences between sessions. This data **never leaves your device** and is
+  not accessible to us.
 
-  **Settings** (in a local DataStore file):
+  **App settings** (DataStore file: `chessbysid_settings`):
 
   - Chosen AI difficulty (Easy / Medium / Hard)
-  - Selected board theme (one of six styles)
+  - Selected board theme (one of six visual presets)
   - Show-legal-moves toggle
   - Highlight-last-move toggle
   - Sound-effects toggle
 
-  **Saved game** (when you tap "Save" on the game screen):
+  **Saved game** (DataStore file: `chessbysid_saved_game`, written only when
+  you tap "Save" on the game screen):
 
   - The current board position (as a FEN string)
   - The list of moves played in that game (algebraic notation)
-  - Captured pieces, last move played, selected game mode and difficulty
+  - Captured pieces, last move played, selected game mode, AI difficulty,
+    and the color you played
 
-  All of the above is stored in the app's private storage directory and is
-  removed automatically when you uninstall the app. You can also clear it
-  manually at any time via **Android Settings → Apps → ChessBySid →
-  Storage → Clear storage**.
+  There is at most one saved game at any time. It is overwritten when you
+  save again, and cleared automatically when the game ends, when you start
+  a New Game from the in-game action bar, or when you uninstall the app.
+
+  You can also clear all stored data manually via **Android Settings →
+  Apps → ChessBySid → Storage → Clear storage**.
+
+  ## Learn mode content
+
+  The Learn mode contains 7 piece tutorials and 200 chess puzzles. All of
+  this content (text, board positions, hint pool) is bundled into the app
+  package at build time. Nothing is fetched at runtime, no progress data
+  is sent anywhere, and no analytics record which puzzles you attempt.
+
+  Chess positions are factual board states encoded as FEN strings — they
+  are not personal data and have no copyright.
 
   ## Permissions
 
@@ -63,7 +78,9 @@
     permission
 
   Sound effects are generated on-device using Android's built-in tone
-  generator and do not require any permission.
+  generator (`android.media.ToneGenerator`) and do not require any
+  permission. If your device or manufacturer disables tone generation,
+  the app silently continues without sound.
 
   ## Third-party services
 
@@ -77,16 +94,17 @@
   ChessBySid is suitable for all ages and does not knowingly collect
   any information from anyone, including children under 13. Because
   the app does not collect personal data, it complies with the spirit
-  of the Children's Online Privacy Protection Act (COPPA) and
-  similar laws by design.
+  of the Children's Online Privacy Protection Act (COPPA) and similar
+  laws by design. The app contains no user-to-user communication,
+  no in-app purchases, no ads, and no external links.
 
   ## Security
 
   Because no personal data is transmitted or stored on remote servers,
   there is no server-side data to protect. Local data is stored in the
   app's private sandbox using Android's standard `DataStore` mechanism,
-  which is only accessible to the app itself under the operating system's
-  app-sandbox model.
+  which is only accessible to ChessBySid itself under the operating
+  system's app-sandbox model.
 
   ## Changes to this policy
 
@@ -99,18 +117,4 @@
 
   If you have questions about this policy, you can reach out at:
 
-  **Email:** kotamraju@vasista.in
-
-  ---
-
-  *This policy describes ChessBySid and its developer only. It does not
-  cover any third-party application, website, or service.*
-
-  Tips before publishing
-
-  - Host it publicly — Play Console requires a publicly accessible URL. Easiest options: push the .md to a public GitHub repo and
-  link to the raw/rendered file, paste into a free GitHub Pages / Notion / Google Site, or drop it on your personal domain.
-  - Keep the effective date current — Update it whenever you change the policy so Play reviewers don't flag it.
-  - If you prefer not to publish your email, create a disposable Gmail like chessbysid.support@gmail.com and swap the contact line.
-  - Google Play Data Safety form — in Play Console you'll fill a separate form declaring data collection. For ChessBySid, select "No
-  data collected" and "No data shared" for every category. This matches the policy above.
+  **Email:** lamarulife@gmail.com
